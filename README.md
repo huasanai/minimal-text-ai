@@ -3,7 +3,7 @@
 **English** · [简体中文](README.zh-CN.md)
 
 [![Obsidian 1.8.7+](https://img.shields.io/badge/Obsidian-1.8.7%2B-7454b3)](https://obsidian.md/)
-[![Release 1.0.1](https://img.shields.io/badge/Release-1.0.1-55776b)](https://github.com/huasanai/minimal-text-ai/releases/latest)
+[![Latest release](./assets/release.svg)](https://github.com/huasanai/minimal-text-ai/releases/latest)
 [![License MIT](https://img.shields.io/badge/License-MIT-596169)](LICENSE)
 
 <img src="./assets/logo.svg" alt="Minimal Text AI inline review" width="100%">
