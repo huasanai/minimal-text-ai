@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-labelledby="title description">
+  <title id="title">Minimal Text AI</title>
+  <desc id="description">A quiet editor with a deleted word and its replacement highlighted inline.</desc>
+  <defs>
+    <style>
+      @keyframes enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes strike { from { stroke-dashoffset: 160; } to { stroke-dashoffset: 0; } }
+      .change { animation: enter 750ms cubic-bezier(0.16,1,0.3,1) 500ms backwards; }
+      .delete { stroke-dasharray: 160; animation: strike 500ms cubic-bezier(0.16,1,0.3,1) 220ms backwards; }
+      @media (prefers-reduced-motion: reduce) { .change, .delete { animation: none; } }
+    </style>
+  </defs>
+  <rect width="1200" height="380" rx="24" fill="#f5efe4"/>
+  <path d="M70 81h56" stroke="#885b47" stroke-width="3" stroke-linecap="round"/>
+  <text x="68" y="169" font-family="Georgia, serif" font-size="70" fill="#292823">Minimal Text AI</text>
+  <text x="115" y="230" font-family="system-ui, sans-serif" font-size="25" fill="#635a4d">Review your edits in place.</text>
+  <g transform="translate(734 76)">
+    <rect width="386" height="226" rx="15" fill="#fefaf2" stroke="#d6cbbb"/>
+    <path d="M30 44h117M30 172h240M30 191h179" stroke="#b2a797" stroke-width="4" stroke-linecap="round"/>
+    <text x="30" y="108" font-family="Georgia, serif" font-size="29" fill="#473e35">Make it</text>
+    <text x="140" y="108" font-family="Georgia, serif" font-size="29" fill="#9b453d">less wordy</text>
+    <path class="delete" d="M139 100h127" stroke="#9b453d" stroke-width="2"/>
+    <g class="change">
+      <rect x="138" y="118" width="97" height="37" rx="5" fill="#e0ebdc"/>
+      <text x="146" y="144" font-family="Georgia, serif" font-size="28" fill="#395e44">clearer</text>
+    </g>
+  </g>
+</svg>

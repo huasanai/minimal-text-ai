@@ -1,0 +1,9 @@
+{
+  "id": "minimal-text-ai",
+  "name": "Minimal Text AI",
+  "version": "1.0.0",
+  "minAppVersion": "1.8.7",
+  "description": "在编辑器中排版、翻译与润色，随时切换兼容 OpenAI 接口的模型。",
+  "author": "画伞",
+  "isDesktopOnly": false
+}

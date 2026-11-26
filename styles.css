@@ -1,0 +1,120 @@
+.minimal-text-ai-status {
+  cursor: var(--cursor);
+  color: var(--text-muted);
+}
+.minimal-text-ai-status:hover,
+.minimal-text-ai-status:focus-visible {
+  color: var(--text-normal);
+}
+.minimal-text-ai-form .setting-item-control textarea {
+  width: 100%;
+  min-height: 8em;
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-small);
+}
+.minimal-text-ai-form .setting-item-control input[type="text"],
+.minimal-text-ai-form .setting-item-control input[type="password"] {
+  width: 100%;
+}
+.minimal-text-ai-settings .setting-item-description {
+  overflow-wrap: anywhere;
+}
+
+.minimal-text-ai-spinner,
+.minimal-text-ai-status.minimal-text-ai-busy::before {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-inline-end: 0.5em;
+  vertical-align: -0.05em;
+  border: 2px dotted var(--text-muted);
+  border-top: 2px solid var(--interactive-accent);
+  border-radius: 50%;
+  animation: minimal-text-ai-spin 1s linear infinite;
+}
+
+@keyframes minimal-text-ai-spin {
+  to { transform: rotate(1turn); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .minimal-text-ai-spinner,
+  .minimal-text-ai-status.minimal-text-ai-busy::before {
+    animation: none;
+  }
+}
+
+.minimal-text-ai-added, .minimal-text-ai-removed {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  box-decoration-break: clone;
+}
+.minimal-text-ai-added {
+  color: var(--text-success);
+  background-color: rgba(var(--color-green-rgb), .15);
+  text-decoration: underline;
+}
+.minimal-text-ai-removed {
+  color: var(--text-error);
+  background-color: rgba(var(--color-red-rgb), .12);
+  text-decoration: line-through;
+}
+.minimal-text-ai-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--size-4-2);
+  padding: var(--size-4-2);
+  background: var(--background-primary);
+  box-shadow: var(--shadow-s);
+  font-size: var(--font-ui-small);
+}
+.minimal-text-ai-toolbar > span { margin-inline-end: auto; }
+.minimal-text-ai-history {
+  min-height: 0;
+  margin: 0;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.cm-editor > .minimal-text-ai-capsule {
+  position: absolute;
+  bottom: max(36px, calc(var(--status-bar-height, 0px) + var(--size-4-2, 8px)));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--layer-popover);
+  width: max-content;
+  max-width: calc(100% - 16px);
+  box-sizing: border-box;
+  justify-content: center;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-xl, 20px);
+  padding: var(--size-4-1) var(--size-4-2);
+}
+.minimal-text-ai-capsule > span { margin-inline-end: 0; }
+.minimal-text-ai-capsule > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cm-editor > .minimal-text-ai-history-panel {
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: min(46rem, calc(100% - 16px));
+  max-height: min(65%, calc(100% - max(36px, calc(var(--status-bar-height, 0px) + var(--size-4-2, 8px))) - 8px));
+  padding: var(--size-4-3);
+  border-radius: var(--radius-l);
+}
+.minimal-text-ai-history-panel > span,
+.minimal-text-ai-history-actions { flex-shrink: 0; }
+.minimal-text-ai-history-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--size-4-2);
+}
