@@ -24,9 +24,28 @@
 
 ## 安装
 
-1. 打开 [Releases](https://github.com/huasanai/minimal-text-ai/releases/latest)，下载 `main.js`、`manifest.json` 和 `styles.css`。
-2. 将三个文件放进笔记库的 `.obsidian/plugins/minimal-text-ai/`。如果你改过 Obsidian 配置目录，请使用对应目录。
-3. 在 Obsidian「设置 → 第三方插件」启用 **Minimal Text AI**。
+### 下载
+
+**[下载 Minimal Text AI 安装包（ZIP）](https://github.com/huasanai/minimal-text-ai/releases/latest/download/minimal-text-ai.zip)**
+
+也可以在终端运行下面的命令，将最新版 ZIP 下载到当前目录。
+
+**macOS**
+
+```bash
+curl -fLO https://github.com/huasanai/minimal-text-ai/releases/latest/download/minimal-text-ai.zip
+```
+
+**Windows（PowerShell 或命令提示符）**
+
+```powershell
+curl.exe -fLO https://github.com/huasanai/minimal-text-ai/releases/latest/download/minimal-text-ai.zip
+```
+
+### 安装到 Obsidian
+
+1. 解压 ZIP，把包含 `manifest.json` 的 `minimal-text-ai` 文件夹移到笔记库的 `.obsidian/plugins/` 里。如果没有 `plugins` 文件夹，先创建一个。如果改过 Obsidian 配置目录，请使用对应目录。
+2. 在 Obsidian 的「设置 → 第三方插件」启用 **Minimal Text AI**。如果插件没出现，重启 Obsidian。
 
 ## 使用
 
@@ -49,7 +68,9 @@ npm ci
 npm run build
 ```
 
-构建生成 `main.js`。用它和仓库里的 `manifest.json`、`styles.css` 按上面的方式安装。
+构建生成 `main.js`。本地测试时，将它和 `manifest.json`、`styles.css` 放入笔记库的 `.obsidian/plugins/minimal-text-ai/`。
+
+在装有 Python 3 的 macOS 或 Linux 上运行 `npm run package`，即可构建 `dist/minimal-text-ai.zip`。每次发 GitHub Release 时，同时上传 ZIP 和 Obsidian 社区安装所需的 `main.js`、`manifest.json`、`styles.css`。
 
 ## 反馈与交流
 

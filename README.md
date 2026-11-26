@@ -24,9 +24,28 @@ Format, polish, and translate Markdown in the Obsidian editor. Review wording ch
 
 ## Installation
 
-1. Download `main.js`, `manifest.json`, and `styles.css` from the [latest release](https://github.com/huasanai/minimal-text-ai/releases/latest).
-2. Place the three files in `.obsidian/plugins/minimal-text-ai/` inside your vault. If your vault uses a custom configuration folder, use that folder in place of `.obsidian`.
-3. In Obsidian, open **Settings → Community plugins** and enable **Minimal Text AI**. Reload Obsidian if the plugin does not appear.
+### Download
+
+**[Download Minimal Text AI (.zip)](https://github.com/huasanai/minimal-text-ai/releases/latest/download/minimal-text-ai.zip)**
+
+You can also download the latest ZIP to your current folder from a terminal.
+
+**macOS**
+
+```bash
+curl -fLO https://github.com/huasanai/minimal-text-ai/releases/latest/download/minimal-text-ai.zip
+```
+
+**Windows (PowerShell or Command Prompt)**
+
+```powershell
+curl.exe -fLO https://github.com/huasanai/minimal-text-ai/releases/latest/download/minimal-text-ai.zip
+```
+
+### Install in Obsidian
+
+1. Extract the ZIP. Move the `minimal-text-ai` folder that contains `manifest.json` into `.obsidian/plugins/` inside your vault. Create `plugins` if needed. If your vault uses a custom configuration folder, use it in place of `.obsidian`.
+2. In Obsidian, open **Settings → Community plugins** and enable **Minimal Text AI**. Reload Obsidian if the plugin does not appear.
 
 ## Usage
 
@@ -49,7 +68,9 @@ npm ci
 npm run build
 ```
 
-The build produces `main.js`. Install it with the repository's `manifest.json` and `styles.css` using the steps above.
+The build produces `main.js`. For local testing, copy it along with `manifest.json` and `styles.css` into your vault's `.obsidian/plugins/minimal-text-ai/` folder.
+
+On macOS or Linux with Python 3, `npm run package` builds `dist/minimal-text-ai.zip`. For each GitHub Release, upload that ZIP alongside `main.js`, `manifest.json`, and `styles.css`, which Obsidian uses for community installs.
 
 ## Feedback and support
 
