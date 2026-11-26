@@ -6,6 +6,22 @@
 
 <img src="./assets/logo.svg" alt="Minimal Text AI，原文与改动在编辑器中对照" width="100%">
 
+Minimal Text AI formats, polishes, and translates Markdown in the Obsidian editor. Review wording changes inline before applying them. Formatting-only edits are applied automatically. Use DeepSeek, Gemini, local Ollama, or a custom OpenAI-compatible endpoint.
+
+## Installation
+
+1. Download `main.js`, `manifest.json`, and `styles.css` from the [latest GitHub release](https://github.com/huasanai/minimal-text-ai/releases/latest).
+2. In your vault, create `.obsidian/plugins/minimal-text-ai/` and place the three files there. If your vault uses a custom configuration folder, use that folder in place of `.obsidian`.
+3. In Obsidian, go to **Settings → Community plugins** and enable **Minimal Text AI**. Reload Obsidian if the plugin does not appear.
+
+## Usage
+
+1. Open **Settings → Minimal Text AI**, choose a model, and set its API key or local endpoint.
+2. Select text and run a command from the editor context menu or the command palette. The built-in formatting command can also run on the whole note when no text is selected. The built-in editor commands appear in Chinese as **智能排版与清理** (Format and Clean), **局部润色优化** (Polish Selection), and **选词/段落翻译** (Translate Selection).
+3. For wording changes, review the inline diff. Press `Enter` to apply or `Esc` to discard.
+
+Each command sends the selected text or note and its prompt to the configured model endpoint. DeepSeek and Gemini require a provider account and API key and may charge for usage. With a local Ollama endpoint, requests stay on your device. Edit history and API keys are stored in your vault's configuration folder.
+
 在 Obsidian 编辑器里排版、润色和翻译。改动有文字增删时，先在原位看清差异，再决定是否写入。
 
 ![编辑器原位显示红绿 Diff，可接受或放弃改动](./assets/图1.png)
